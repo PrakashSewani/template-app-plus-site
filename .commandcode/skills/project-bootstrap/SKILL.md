@@ -12,6 +12,19 @@ metadata:
 The repository ships without a stack on purpose. Your job: turn the user's idea into a chosen
 stack, recorded in the docs, scaffolded and verified. Do not write product code before step 5.
 
+## Step 0 — Rename the template (once)
+
+If the repo still says `template-app-plus-site` / "Product + Promo Site" anywhere (README,
+AGENTS.md, docs, skills), fix that before anything else. The slug is the repository name; the
+title is the human name for it.
+
+```bash
+node scripts/init.mjs --name <repo-slug> --title "<Product Title>"
+```
+
+If the user hasn't named the product yet, ask — do not invent one. After the rename, re-read
+`README.md` and `AGENTS.md` (they now say the real name), delete `scripts/init.mjs`, and continue.
+
 ## Step 1 — Get the brief (ask, do not assume)
 
 Ask only the questions whose answers change the design. Typical set (adapt — skip what the user
