@@ -19,7 +19,9 @@ rule 4. Keep exactly one phase `in progress`.
 
 **Done this session:** recorded the `dev`-to-`main` branching and labeled release policy in
 `docs/decisions.md`, `docs/architecture.md`, and `docs/development.md`; aligned agent, contributor,
-PR, and bootstrap instructions. The stack-specific release workflow remains pending bootstrap.
+PR, and bootstrap instructions; defined the senior-architect workflow, request budget, scope
+controls, decision format, and verification gates. The stack-specific release workflow remains
+pending bootstrap.
 
 **Verified:** `git diff --check` passed for changed files; no stale manual-release or
 default-`main` instructions remain.
