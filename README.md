@@ -36,6 +36,8 @@ project's requirements are known.
 - `.commandcode/agents/` — `implementer`, `verifier`, `docs-writer`.
 - `.commandcode/skills/` — `project-bootstrap` (choose + scaffold the stack), `ship-release`.
 - `scripts/init.mjs` — renames the template once; delete it after.
+- Branching policy — set `dev` as the GitHub default/integration branch; agent changes arrive
+   through PRs to `dev`, and labeled releases run from `main` only (see `docs/architecture.md`).
 
 ## Why nothing is pinned
 

@@ -26,8 +26,16 @@
 
 ## Releases and deploys
 
-Manual by policy — the exact commands live in
-[`.commandcode/skills/ship-release/SKILL.md`](../.commandcode/skills/ship-release/SKILL.md).
+Create release PRs from `dev` to `main` and apply exactly one release label:
+`release:patch`, `release:minor`, or `release:major`. After merge, release automation runs only
+from `main`, updates the stack's version source, creates a matching `v<version>` tag, and
+publishes a GitHub release. Merges without a release label do not publish a release. Product and
+site deployments remain manual; see
+[`.commandcode/skills/ship-release/SKILL.md`](../.commandcode/skills/ship-release/SKILL.md) for
+the project-specific procedure.
+
+This template has no stack or release workflow yet. Wire and verify the version bump, tag, and
+GitHub release automation during bootstrap after choosing the stack and its version source.
 
 ## Troubleshooting
 
