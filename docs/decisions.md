@@ -35,3 +35,12 @@ release. A merge without a release label does not publish a release. `dev` carri
 work between releases and may match `main` immediately after one. Product/site deployment remains
 manual. The concrete automation is wired during bootstrap after the stack and version source are
 chosen.
+
+## D-003: Agent operating model
+
+**Date:** 2026-09-26
+
+**Decision:** The primary agent acts as senior architect and owns requirements analysis,
+architecture, documentation, code generation, integration, testing, and final verification.
+Subagents are optional and restricted to one sequential, read-only discovery or evidence-gathering
+request; they do not implement, make decisions, edit documentation, or verify changes.
