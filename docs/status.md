@@ -17,6 +17,16 @@ rule 4. Keep exactly one phase `in progress`.
 
 **Phase:** 0 — waiting for the project brief.
 
+**Done this session:** recorded the `dev`-to-`main` branching and labeled release policy in
+`docs/decisions.md`, `docs/architecture.md`, and `docs/development.md`; aligned agent, contributor,
+PR, and bootstrap instructions. The stack-specific release workflow remains pending bootstrap.
+
+**Verified:** `git diff --check` passed for changed files; no stale manual-release or
+default-`main` instructions remain.
+
+**Blocked by:** the GitHub default branch is still `main`; the available token cannot update
+repository settings (API 403). The product brief and stack selection are also pending.
+
 **Next action:** describe the product in plain words (see `docs/product.md` for what belongs in
 it), then run the `project-bootstrap` skill.
 

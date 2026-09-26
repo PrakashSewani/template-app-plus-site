@@ -63,13 +63,28 @@ product.
 Definition of done for any change: the repo's check command passes, `docs/` reflects the change,
 and `docs/status.md` is current.
 
-## Publishing is manual
+## Branch and release policy
 
-Store submissions, registry publishes, and site deploys happen only when I ask for them. The
-exact commands live in [`.commandcode/skills/ship-release`](./.commandcode/skills/ship-release/SKILL.md)
-— follow them literally, do not invent pipelines.
+- Configure `dev` as the default branch and use it as the integration target. For repository
+   changes, create a feature branch and open a pull request targeting `dev`; never commit or push
+   directly to `dev` or `main`.
+- Release changes flow through a pull request from `dev` to `main`. A release PR must have exactly
+   one `release:patch`, `release:minor`, or `release:major` label.
+- Release-related workflows run only after a merge to `main`. The release workflow updates the
+   selected stack's version source, creates the matching `v<version>` tag, and publishes a GitHub
+   release. A merge without a release label does not publish a release.
+- Deployments of the product or promo site remain manual. Do not deploy unless asked.
+
+## Deployments are manual
+
+Store submissions, registry publishing, and site deployments happen only when I ask for them.
+The project-specific procedures live in
+[`.commandcode/skills/ship-release`](./.commandcode/skills/ship-release/SKILL.md) — follow them
+literally, do not invent deploy pipelines.
 
 ## Working preferences (append as you learn)
+
+- 2026-09-26: Use `dev` as the default; agent changes go through PRs to `dev`, and labeled releases run only from `main`.
 
 <!-- One line per learned preference, dated. Examples:
 - 2026-09-18: Wants exact deploy commands, not auto-deploy pipelines.

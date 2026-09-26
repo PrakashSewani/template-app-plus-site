@@ -21,3 +21,17 @@ Replace this entry before scaffolding, and include:
 
 The chosen stack is then described in `docs/architecture.md`, and its commands in
 `docs/development.md`.
+
+## D-002: Branching and automated releases
+
+**Date:** 2026-09-26
+
+**Decision:** `dev` is the default integration branch. Agent changes use feature branches and
+pull requests targeting `dev`; releases flow from `dev` to `main`. Release-related workflows run
+only after changes merge to `main`. A release PR must carry exactly one of
+`release:patch`, `release:minor`, or `release:major`; the release automation applies that bump to
+the chosen stack's version source, creates a matching `v<version>` tag, and publishes a GitHub
+release. A merge without a release label does not publish a release. `dev` carries unreleased
+work between releases and may match `main` immediately after one. Product/site deployment remains
+manual. The concrete automation is wired during bootstrap after the stack and version source are
+chosen.
