@@ -4,6 +4,19 @@ Append-only log of settled decisions. New entries get the next number, a date, a
 context. If a decision is reversed, add a new entry that supersedes the old one — never edit
 history. The agent records decisions here **before** implementing them (see `AGENTS.md`, rule 2).
 
+## D-000: Identity first
+
+**Date:** — (dated and completed by the identity PR)
+
+**Decision:** The repository's first merged pull request is the identity PR: the product name, the
+`README.md`, and `docs/product.md` (the vision). No stack is selected, nothing is scaffolded, and
+no other branch is cut until it is merged. It is recorded here as D-001 — the name and the
+one-line vision — and the identity PR replaces the pending stack entry that currently sits there.
+
+**Why:** every other decision in this repository (stack, structure, schema, scope) is downstream
+of what the thing is called and what it is for. Deciding those first is what keeps the stack from
+being chosen for a product nobody has described yet.
+
 ## D-001: Stack selection — pending
 
 **Date:** —

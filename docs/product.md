@@ -1,8 +1,8 @@
 # Product
 
-> **Fill this in first.** This file is the brief the agent works from — the stack, structure, and
-> scope all follow from it. Write it with the agent: answer its questions in chat, let it update
-> this file before any code exists (AGENTS.md, rule 2).
+> **This file is the product's identity, and it is filled in by the identity PR — the first pull
+> request in this repository (see `AGENTS.md`, rule 3). Nothing is built before it merges: no
+> stack, no scaffold, no code. One paragraph per section, plain words, no marketing.**
 
 ## What it is
 
