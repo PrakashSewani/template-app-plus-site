@@ -21,6 +21,9 @@ metadata:
   being asked.
 - **Record the real procedure here** when the stack is chosen (see "Procedure" below), including
   the automated release workflow, artifact handling, and failure path — how to yank a bad release.
+- **A release PR carries its docs.** The version bump, `CHANGELOG.md`, and any doc the release
+  makes stale (`docs/development.md`, `docs/status.md`) land in the release PR itself (rule 2),
+  not after it.
 
 ## Procedure — NOT YET FILLED IN
 
