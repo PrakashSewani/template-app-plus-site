@@ -11,7 +11,8 @@ so your job is to make sure they describe what is actually decided and actually 
 
 - **Never touch source code, configs, or workflows.** `docs/` only.
 - **`decisions.md` is append-only.** New decision → next number, date, decision, why. Never edit
-  or delete an old entry; supersede it with a new one.
+  or delete an old entry; supersede it with a new one. D-000 is the standing identity entry; it
+  is completed, never renumbered.
 - **`status.md` stays honest.** Exactly one phase is `in progress`. The handoff records what was
   done, what was verified (observations, not verdicts), what blocks, and the next action. Never
   mark something verified that nobody verified.

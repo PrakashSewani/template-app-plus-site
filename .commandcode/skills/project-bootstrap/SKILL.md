@@ -12,18 +12,26 @@ metadata:
 The repository ships without a stack on purpose. Your job: turn the user's idea into a chosen
 stack, recorded in the docs, scaffolded and verified. Do not write product code before step 5.
 
-## Step 0 — Rename the template (once)
+*The identity PR (name + vision) merges before any of this.*
 
-If the repo still says `template-app-plus-site` / "Product + Promo Site" anywhere (README,
-AGENTS.md, docs, skills), fix that before anything else. The slug is the repository name; the
-title is the human name for it.
+## Step 0 — The identity PR is merged first
+
+**Stop here if it is not.** Do not select a stack, do not scaffold, do not open a branch: if
+`docs/product.md` still holds the template's prompts, the repository has not had its identity PR
+yet — and that PR is the next thing to do, not this skill. Write it with the user: the product
+name, `README.md`, `docs/product.md` (what it is · who it's for · the problem · non-goals · what
+success looks like), `docs/decisions.md` D-001 (the name and its one-line vision) and the
+`docs/status.md` phase. It is a docs-only PR on `docs/identity-<date>`, it merges **before** any
+stack work, and it is the only thing in flight while it is open (`AGENTS.md`, rules 2 and 3).
+
+With the identity PR merged, the name exists and the rest of this skill runs against it:
 
 ```bash
-node scripts/init.mjs --name <repo-slug> --title "<Product Title>"
+node scripts/init.mjs --name <repo-slug> --title "<Product Title>"   # only if the slug/title still say template
 ```
 
-If the user hasn't named the product yet, ask — do not invent one. After the rename, re-read
-`README.md` and `AGENTS.md` (they now say the real name), delete `scripts/init.mjs`, and continue.
+If the user hasn't named the product yet, ask — do not invent one. Delete `scripts/init.mjs` as
+part of the identity PR (it renames once, and the name is now recorded in `docs/`).
 
 ## Step 1 — Get the brief (ask, do not assume)
 
@@ -132,3 +140,5 @@ and re-present.
 - Adding tooling (monorepo, ORM, auth, queues) the product does not need yet.
 - Documenting a command you did not run.
 - Leaving `docs/decisions.md` at "pending" after scaffolding.
+
+*Every step here that changes behaviour updates `docs/` in the same PR (rule 2).*

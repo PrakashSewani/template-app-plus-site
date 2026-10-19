@@ -7,15 +7,16 @@ rule 4. Keep exactly one phase `in progress`.
 
 | Phase | Scope | Status |
 |---|---|---|
-| 0 | Requirements + stack selection: fill `docs/product.md`, choose the stack, record D-001 | in progress |
-| 1 | Scaffold: structure, checks, CI, release path — recorded in `docs/architecture.md` / `development.md` | not started |
-| 2 | Product: the core workflow, end to end | not started |
-| 3 | Promo site: the site that explains it and sends people to it | not started |
-| 4 | Launch: first release tagged, site deployed | not started |
+| 0 | Identity: name, `README.md`, `docs/product.md` vision, D-001 — the identity PR (rule 3) | in progress |
+| 1 | Requirements + stack selection: choose the stack, record D-001 (stack) | not started |
+| 2 | Scaffold: structure, checks, CI, release path — recorded in `docs/architecture.md` / `development.md` | not started |
+| 3 | Product: the core workflow, end to end | not started |
+| 4 | Promo site: the site that explains it and sends people to it | not started |
+| 5 | Launch: first release tagged, site deployed | not started |
 
 ## Current handoff
 
-**Phase:** 0 — waiting for the project brief.
+**Phase:** 0 — waiting for the product name and vision (the identity PR).
 
 **Done this session:** recorded the `dev`-to-`main` branching and labeled release policy in
 `docs/decisions.md`, `docs/architecture.md`, and `docs/development.md`; aligned agent, contributor,
